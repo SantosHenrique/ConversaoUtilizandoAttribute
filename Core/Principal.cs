@@ -42,6 +42,7 @@ namespace Core
             {
                 Console.WriteLine(item.GetValue(objeto));
             }
+            Console.ReadKey();
         }
     }
 }
