@@ -10,7 +10,7 @@ No dia a dia nos deparamos com alguns problemas e nem sempre conseguimos resolv�
 que se repetem algumas vezes em um software legado que eu contribuo para manutenção. Não tive muito tempo para resolver o problema da 
 melhor forma. Entretanto, vi a oportunidade de criar um algoritmo que seria válido em algumas situações, sendo assim conversei com outro 
 mebro da equipe e surgiram algumas idéias para esse método genérico. Portanto, o algoritmo desenvolvido é algo bem simples, porém 
-apropriado.
+apropriado. 
 
 ## Começando
 
@@ -34,7 +34,15 @@ Agora é só compilar a aplicação.
 Como funcionalidade principal, a aplicação converte o valor de um propriedade e atribui o resultado a outra propriedade, da mesma classe, 
 como descrito no primeiro parágrafo. Propriedade essa, definida pelo desenvolvedor. Além disso, o algoritmo possui alguns conceitos 
 legais e bem úteis, como Genéricos. A prióri, os tipos de conversão são de string para DateTime e Decimal, suficientes para demonstrar o
-funcionamento do código. O código evoluirá conforme as necessidades aparecerem, já que a ideia é incorporar o algoritmo em outro projeto.
+funcionamento do código. O código evoluirá conforme as necessidades aparecerem, já que a ideia é incorporar o algoritmo a outro projeto.
 
 ## Exemplo 
+
+<img src="https://github.com/SantosHenrique/ConversaoUtilizandoAttribute/blob/master/Core/imgs/classeTeste.png">
+
+## Licença
+
+Não se aplica.
+
+
 
