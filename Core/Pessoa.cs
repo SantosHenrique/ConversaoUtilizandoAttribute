@@ -9,9 +9,12 @@ namespace Core
     /// </summary>
     public class Pessoa
     {
-        public string sNomesss { get; set; }
+        public string sNome { get; set; }
         [CampoAttribute(Convertido = "dtDataNascimento")]
         public string sDataNascimento { get; set; }
         public DateTime dtDataNascimento { get; set; }
+        [CampoAttribute(Convertido = "dPeso")]
+        public string sPeso { get; set; }
+        public Decimal dPeso { get; set; }
     }
 }

@@ -27,17 +27,7 @@ namespace Core
                     if (TemPropriedade(convertida, nomeAtributoConvertido))
                     {
                         string tipoPropriedade = convertida.GetType().GetProperty(nomeAtributoConvertido).PropertyType.Name;
-                        switch (tipoPropriedade)
-                        {
-                            case "DateTime":
-                                {
-                                    ConverterStringParaDateTime(convertida, nomeAtributoConvertido, propriedade.GetValue(convertida).ToString());
-                                }; break;
-                            default: 
-                                {
-                                    throw new SystemException($"Não existe método para a conversão do tipo {tipoPropriedade}");
-                                }; 
-                        }
+                        ConverterString(convertida, nomeAtributoConvertido, propriedade.GetValue(convertida).ToString(), tipoPropriedade);
                     }
                     else
                     {
@@ -67,20 +57,36 @@ namespace Core
         /// <returns>True caso a classe contenha a propriedade</returns>
         private static bool TemPropriedade<T>(T convertida, string propriedade) where T : class
             => convertida.GetType().GetProperty(propriedade) != null;
-        
+
         /// <summary>
-        /// Converte String para DateTime
+        /// Converte String para outro tipo
         /// </summary>
         /// <typeparam name="T">Tipo de classe genérico</typeparam>
         /// <param name="convertida">Classe que possui a propriedade que receberá a conversão</param>
         /// <param name="nomeAtributoConvertido">Nome do atributo que receberá a conversão</param>
         /// <param name="valor">Valor que será convertido</param>
-        private static void ConverterStringParaDateTime<T>(T convertida, string nomeAtributoConvertido, string valor)
+        /// <param name="tipoPropriedade">Tipo que será convertido</param>
+        private static void ConverterString<T>(T convertida, string nomeAtributoConvertido, string valor, string tipoPropriedade)
         {
             try
             {
-                DateTime dataConvertida = DateTime.Parse(valor);
-                convertida.GetType().GetProperty(nomeAtributoConvertido).SetValue(convertida, dataConvertida);
+                object convertido;
+                switch (tipoPropriedade)
+                {
+                    case "DateTime":
+                        {
+                            convertido = DateTime.Parse(valor);
+                        }; break;
+                    case "Decimal":
+                        {
+                            convertido = Decimal.Parse(valor);
+                        }; break;
+                    default:
+                        {
+                            throw new SystemException($"Não existe método para a conversão do tipo {tipoPropriedade}");
+                        };
+                }
+                convertida.GetType().GetProperty(nomeAtributoConvertido).SetValue(convertida, convertido);
             }
             catch (Exception e)
             {

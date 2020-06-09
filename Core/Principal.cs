@@ -28,6 +28,7 @@ namespace Core
         {
             pessoa.sNome = "Henrique";
             pessoa.sDataNascimento = "1995-04-23";
+            pessoa.sPeso = "70.5";
         }
 
         /// <summary>
