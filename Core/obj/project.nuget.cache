@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "613VXA6Lg8Jl9yonoS8ELmf6DWTvWHo0YwED/LM5/jTyVf8wxH5U6XLPvwVhsoPmjhLt7uWZxVmjEbPpbsg9ww==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ferna\\source\\repos\\ConversaoTipos\\Core\\Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ferna\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\ferna\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
